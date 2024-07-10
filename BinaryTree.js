@@ -50,10 +50,12 @@ class BinaryTree {
 
 const tree = new BinaryTree();
 
-tree.insert(5);
-tree.insert(10);
 tree.insert(15);
 tree.insert(20);
+tree.insert(10);
 tree.insert(25);
+tree.insert(5);
 
 console.log("Binary Tree: ", tree);
+
+console.log("In order traversal: ", tree.inOrderTraversal(tree.root));
