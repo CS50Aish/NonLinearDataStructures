@@ -52,6 +52,16 @@ class BinaryTree{
         }
         return node.data;
     }
+
+    findMax(node = this.root){
+        if(!node){
+            return null;
+        }
+        while(node.right){
+            node = node.right;
+        }
+        return node.data;
+    }
 }
 
 const tree = new BinaryTree();
@@ -63,4 +73,6 @@ tree.insert(4);
 tree.insert(2);
 
 console.log("Binary Tree: ", tree);
-console.log();
+console.log("Search for 5: ", tree.search(5));
+console.log("Minimum value: ", tree.findMin());
+console.log("Maximum value: ", tree.findMax());
